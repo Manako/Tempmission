@@ -33,8 +33,8 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1757298911491810}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 10, y: 10, z: 0}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 458, y: 166, z: 0}
   m_LocalScale: {x: 0, y: 0, z: 0}
   m_Children: []
   m_Father: {fileID: 0}
@@ -48,27 +48,23 @@ MonoBehaviour:
   m_GameObject: {fileID: 1757298911491810}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c81e6c9396d99994d896c292a6642607, type: 3}
+  m_Script: {fileID: 11500000, guid: 6dd71b620c754d2488a0568dbcd1135c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  position: {x: 10, y: 10}
-  texture: {fileID: 2800000, guid: 7b8729cc97a0055498814f13e5028084, type: 3}
-  prompt_texture: {fileID: 2800000, guid: 6602b110c642f00468dc5e4374f34bda, type: 3}
+  hasname: 0
+  name: 
+  position: {x: 0, y: 0}
+  texture: {fileID: 2800000, guid: 375b42bdd43ec6d4aaf36b2bafa578ae, type: 3}
+  prompt_texture: {fileID: 2800000, guid: 918fd4e367327ad4da31b2e10180d837, type: 3}
   strings:
-  - The FitnessGram Pacer Test is a multistage aerobic capacity test that progressively
-    gets more difficult as it continues.
-  - The 20 meter pacer test will begin in 30 seconds. Line up at the start. The running
-    speed starts slowly but gets faster each minute after you hear this signal bodeboop.
-  - A single lap should be completed every time you hear this sound. Remember to run
-    in a straight line and run as long as possible.
-  - "The second time you fail to complete a lap before the sound, your test is over.
-    The test will begin on the word start. On your mark. Get ready!\u2026 Start."
+  - Hello
+  - World
   style:
     m_Name: 
     m_Normal:
       m_Background: {fileID: 0}
       m_ScaledBackgrounds: []
-      m_TextColor: {r: 1, g: 1, b: 1, a: 1}
+      m_TextColor: {r: 0.59683174, g: 0.97794116, b: 0.63100016, a: 1}
     m_Hover:
       m_Background: {fileID: 0}
       m_ScaledBackgrounds: []
@@ -121,7 +117,7 @@ MonoBehaviour:
     m_FontSize: 0
     m_FontStyle: 0
     m_Alignment: 0
-    m_WordWrap: 1
+    m_WordWrap: 0
     m_RichText: 1
     m_TextClipping: 0
     m_ImagePosition: 0

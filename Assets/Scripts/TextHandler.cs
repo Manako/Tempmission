@@ -28,10 +28,7 @@ public class TextHandler : MonoBehaviour {
         state = STARTING;
         currentstring = 0;
         rend = gameObject.GetComponent(typeof(SpriteRenderer)) as SpriteRenderer;
-        if (hasname)
-            usebox = new Rect(position.x, position.y+25, texture.width, texture.height);
-        else
-            usebox = new Rect(position.x, position.y, texture.width, texture.height);
+        
         draw_prompt = false;
         counter = 0;
     }
@@ -52,6 +49,10 @@ public class TextHandler : MonoBehaviour {
                 textbox.p_tex = prompt_texture;
                 textbox.name = name;
                 textbox.hasname = hasname;
+                if (hasname)
+                    usebox = new Rect(position.x, position.y + 25, texture.width, texture.height);
+                else
+                    usebox = new Rect(position.x, position.y, texture.width, texture.height);
                 if (usebox == new Rect(0, 0, 0, 0))
                 {
                     textbox.usebox = usebox;
@@ -70,6 +71,18 @@ public class TextHandler : MonoBehaviour {
         }
         else if(state == DRAWING)
         {
+            if (hasname)
+                usebox = new Rect(position.x, position.y + 25, texture.width, texture.height);
+            else
+                usebox = new Rect(position.x, position.y, texture.width, texture.height);
+            if (usebox == new Rect(0, 0, 0, 0))
+            {
+                textbox.usebox = usebox;
+            }
+            else
+            {
+                textbox.usebox = usebox;
+            }
             if (Input.GetKeyDown("a"))
             {
                 textbox.Skip();
@@ -77,6 +90,18 @@ public class TextHandler : MonoBehaviour {
             }
         }else if(state == FINISHED)
         {
+            if (hasname)
+                usebox = new Rect(position.x, position.y + 25, texture.width, texture.height);
+            else
+                usebox = new Rect(position.x, position.y, texture.width, texture.height);
+            if (usebox == new Rect(0, 0, 0, 0))
+            {
+                textbox.usebox = usebox;
+            }
+            else
+            {
+                textbox.usebox = usebox;
+            }
             if (Input.GetKeyDown("a"))
             {
                 Destroy(textbox);
