@@ -5,7 +5,7 @@ using UnityEngine;
 public class Collect_Bits : MonoBehaviour {
 
     public TextMesh bits_txt;
-    private int bitCount = 0;
+    public int bitCount = 0;
 
 	void Start () {
 
