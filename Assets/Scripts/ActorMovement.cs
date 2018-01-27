@@ -14,7 +14,7 @@ public class ActorMovement : MonoBehaviour
     //Vars used to check if grounded, so we know when we can jump.
     bool grounded = false;
     public Transform groundCheck;
-    float groundRadius = 0.2f;
+    float groundRadius = 0.5f;
     public float jumpForce = 200.0f;
     public LayerMask whatIsGround;
     public float fallMultiplier = 2.5f;
