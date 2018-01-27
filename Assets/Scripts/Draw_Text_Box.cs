@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class Draw_Text_Box : MonoBehaviour
 {
+    public bool hasname;
+    public string name;
     public Texture tex;
     public Texture p_tex;
     public TextHandler parent;
@@ -37,6 +39,12 @@ public class Draw_Text_Box : MonoBehaviour
         }
         if (usebox != new Rect(0,0,0,0))
         {
+            if (hasname)
+            {
+                GUI.DrawTexture(new Rect(usebox.x, usebox.y - 25, usebox.width, usebox.height), tex);
+                GUI.Label(new Rect(usebox.x, usebox.y - 29, usebox.width, usebox.height), name, style);
+            }
+
             GUI.DrawTexture(usebox, tex);
             GUI.Label(usebox, message.Substring(0, characters), style);
 
@@ -45,6 +53,12 @@ public class Draw_Text_Box : MonoBehaviour
         }
         else
         {
+            if (hasname)
+            {
+                GUI.DrawTexture(new Rect(usebox.x, usebox.y - 25, usebox.width, usebox.height), tex);
+                GUI.Label(new Rect(usebox.x, usebox.y - 29, usebox.width, usebox.height), name, style);
+            }
+
             GUI.DrawTexture(usebox, tex);
             GUI.Label(new Rect(10, 10, 100, 50), message.Substring(0, characters), style);
             if (draw_prompt)
