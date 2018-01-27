@@ -3,8 +3,8 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class StraightXMovement : MonoBehaviour {
-    public float maxY = 100;
-    public float minY = 0;
+    public float maxX = 100;
+    public float minX = 0;
 
     float move;
     bool movingRight;
@@ -17,11 +17,11 @@ public class StraightXMovement : MonoBehaviour {
     // Update is called once per frame
     void Update()
     {
-        if (transform.position.x > maxY)
+        if (transform.position.x > maxX)
         {
             movingRight = false;
         }
-        else if (transform.position.x < minY)
+        else if (transform.position.x < minX)
         {
             movingRight = true;
         }
