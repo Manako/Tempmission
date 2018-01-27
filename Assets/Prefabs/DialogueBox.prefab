@@ -48,23 +48,22 @@ MonoBehaviour:
   m_GameObject: {fileID: 1757298911491810}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6dd71b620c754d2488a0568dbcd1135c, type: 3}
+  m_Script: {fileID: 11500000, guid: c81e6c9396d99994d896c292a6642607, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   hasname: 0
   name: 
-  position: {x: 0, y: 0}
-  texture: {fileID: 2800000, guid: 375b42bdd43ec6d4aaf36b2bafa578ae, type: 3}
-  prompt_texture: {fileID: 2800000, guid: 918fd4e367327ad4da31b2e10180d837, type: 3}
+  position: {x: 10, y: 10}
+  texture: {fileID: 2800000, guid: 7b8729cc97a0055498814f13e5028084, type: 3}
+  prompt_texture: {fileID: 2800000, guid: 6602b110c642f00468dc5e4374f34bda, type: 3}
   strings:
-  - Hello
-  - World
+  - this should work please work
   style:
     m_Name: 
     m_Normal:
       m_Background: {fileID: 0}
       m_ScaledBackgrounds: []
-      m_TextColor: {r: 0.59683174, g: 0.97794116, b: 0.63100016, a: 1}
+      m_TextColor: {r: 1, g: 1, b: 1, a: 1}
     m_Hover:
       m_Background: {fileID: 0}
       m_ScaledBackgrounds: []
