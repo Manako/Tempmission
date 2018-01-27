@@ -142,7 +142,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 085dee5b9fcaf4247ab91e49397acf04, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxMove: 300
 --- !u!61 &85685723
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -255,7 +254,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 085dee5b9fcaf4247ab91e49397acf04, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxMove: 150
 --- !u!114 &94503939
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -267,7 +265,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1f983868bc480db4baa892c2252aeae4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxMove: 150
 --- !u!61 &94503940
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -478,7 +475,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1f983868bc480db4baa892c2252aeae4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxMove: 200
 --- !u!61 &1079637594
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -600,6 +596,7 @@ GameObject:
   - component: {fileID: 1645321056}
   - component: {fileID: 1645321055}
   - component: {fileID: 1645321054}
+  - component: {fileID: 1645321058}
   m_Layer: 0
   m_Name: DamageBlock
   m_TagString: Untagged
@@ -700,6 +697,17 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1645321058
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1645321053}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dc74d7e07d30e3549a0b4ea037715cad, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1681027795
 GameObject:
   m_ObjectHideFlags: 0
@@ -710,6 +718,7 @@ GameObject:
   - component: {fileID: 1681027800}
   - component: {fileID: 1681027799}
   - component: {fileID: 1681027798}
+  - component: {fileID: 1681027801}
   - component: {fileID: 1681027797}
   - component: {fileID: 1681027796}
   m_Layer: 0
@@ -730,7 +739,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 085dee5b9fcaf4247ab91e49397acf04, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxMove: 100
 --- !u!114 &1681027797
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -824,6 +832,17 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1681027801
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1681027795}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dc74d7e07d30e3549a0b4ea037715cad, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1892613470
 GameObject:
   m_ObjectHideFlags: 0
