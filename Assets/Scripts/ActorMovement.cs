@@ -22,7 +22,7 @@ public class ActorMovement : MonoBehaviour
     bool isDead = false;
     float dying = 0;
     public float killY = -25;
-    Vector2 startPosition;
+ 
 
     // Use this for initialization
     void Start()
@@ -30,7 +30,6 @@ public class ActorMovement : MonoBehaviour
         //Get and store a reference to the Rigidbody2D component so that we can access it.
         rb2d = GetComponent<Rigidbody2D>();
         anim = GetComponent<Animator>();
-        startPosition = transform.position;
     }
 
     public void Die()
