@@ -101,7 +101,7 @@ public class ActorMovement : MonoBehaviour
             return;
 
         // jump if key pressed
-        if (grounded && Input.GetKeyDown(KeyCode.Space))
+        if (grounded && (Input.GetKeyDown(KeyCode.Space) || Input.GetKeyDown(KeyCode.UpArrow) || Input.GetKeyDown(KeyCode.W)))
         {
             rb2d.velocity += (Vector2.up * Physics2D.gravity.y * (fallMultiplier - 1)) / 2;// * Time.deltaTime;
             anim.SetBool("ground", false);
