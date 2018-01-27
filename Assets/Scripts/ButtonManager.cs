@@ -10,7 +10,11 @@ public class ButtonManager : MonoBehaviour {
 
 	public void introGameBtn (string newGameLevel)
 	{
+		
+		SceneManager.UnloadSceneAsync ("TitleMenu");
 		SceneManager.LoadScene (newGameLevel);
+		SceneManager.LoadScene ("Level_Overlay", LoadSceneMode.Additive);
+
 	}
 	public void startGameBtn()
 	{
