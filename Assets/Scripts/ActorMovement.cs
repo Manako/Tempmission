@@ -17,6 +17,7 @@ public class ActorMovement : MonoBehaviour
     float groundRadius = 0.2f;
     public float jumpForce = 200.0f;
     public LayerMask whatIsGround;
+    public float fallMultiplier = 2.5f;
 
     //Variables related to death and resetting the player to their original location.
     bool isDead = false;
@@ -67,13 +68,8 @@ public class ActorMovement : MonoBehaviour
         //Store the current horizontal input in the float moveHorizontal.
         float moveHorizontal = Input.GetAxis("Horizontal");
 
-        //Store the current vertical input in the float moveVertical.
-        float moveVertical = Input.GetAxis("Vertical");
-
-        
-
         //Use the two store floats to create a new Vector2 variable movement.
-        Vector2 movement = new Vector2(moveHorizontal, moveVertical);
+        Vector2 movement = new Vector2(moveHorizontal, 0);
 
         //Call the AddForce function of our Rigidbody2D rb2d supplying movement multiplied by speed to move our player.
         if (moveHorizontal < maxSpeed)
@@ -90,7 +86,6 @@ public class ActorMovement : MonoBehaviour
         }
 
         anim.SetFloat("speedX", Mathf.Abs(moveHorizontal));
-        anim.SetFloat("speedY", Mathf.Abs(moveVertical));
 
         anim.SetBool("ground", true);
 
@@ -108,8 +103,9 @@ public class ActorMovement : MonoBehaviour
         // jump if key pressed
         if (grounded && Input.GetKeyDown(KeyCode.Space))
         {
+            rb2d.velocity += (Vector2.up * Physics2D.gravity.y * (fallMultiplier - 1)) / 2;// * Time.deltaTime;
             anim.SetBool("ground", false);
-            GetComponent<Rigidbody2D>().AddForce(new Vector2(0, jumpForce));
+            //GetComponent<Rigidbody2D>().AddForce(new Vector2(0, jumpForce));
         }
     }
 
