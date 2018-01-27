@@ -3,12 +3,15 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class TextHandler : MonoBehaviour {
+    public bool hasname;
+    public string name;
     public Vector2 position;
     public Texture texture;
     public Texture prompt_texture;
     public string[] strings;
     public GUIStyle style;
 
+    private Texture nametex;
     private int state;
     // Use this for initialization
     private const int STATIC = 0;
@@ -25,7 +28,10 @@ public class TextHandler : MonoBehaviour {
         state = STARTING;
         currentstring = 0;
         rend = gameObject.GetComponent(typeof(SpriteRenderer)) as SpriteRenderer;
-        usebox = new Rect(position.x, position.y, texture.width, texture.height);
+        if (hasname)
+            usebox = new Rect(position.x, position.y+25, texture.width, texture.height);
+        else
+            usebox = new Rect(position.x, position.y, texture.width, texture.height);
         draw_prompt = false;
         counter = 0;
     }
@@ -44,6 +50,8 @@ public class TextHandler : MonoBehaviour {
                 textbox.SetStyle(style);
                 textbox.tex = texture;
                 textbox.p_tex = prompt_texture;
+                textbox.name = name;
+                textbox.hasname = hasname;
                 if (usebox == new Rect(0, 0, 0, 0))
                 {
                     textbox.usebox = usebox;
