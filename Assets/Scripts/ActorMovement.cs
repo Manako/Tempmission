@@ -67,7 +67,14 @@ public class ActorMovement : MonoBehaviour
             if (dying > 200)
             {
                 //Application.LoadLevel(Application.loadedLevel);
-                SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+                for (int i = 0; i < SceneManager.sceneCount; i++)
+                {
+                    Scene s = SceneManager.GetSceneAt(i);
+                    if (s.isLoaded)
+                    {
+                        SceneManager.LoadScene(SceneManager.GetSceneAt(i).buildIndex);
+                    }
+                }
             }
             return;
         }
