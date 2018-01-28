@@ -31,7 +31,7 @@ public class Camera_Follow : MonoBehaviour
 
             targetPos = Camera.main.transform.position + (targetDirection.normalized * interpVelocity * Time.deltaTime);
 
-        Camera.main.transform.position = Vector3.Lerp(Camera.main.transform.position, targetPos, 0.25f);
+        Camera.main.transform.position = Vector3.Lerp(Camera.main.transform.position, targetPos, 1f);
 
         //}
     }
