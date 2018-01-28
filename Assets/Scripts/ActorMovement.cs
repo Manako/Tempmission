@@ -7,6 +7,7 @@ public class ActorMovement : MonoBehaviour
 
     public float speed;             //Floating point variable to store the player's movement speed.
     public float maxSpeed;
+    public float slowingSpeed;
     bool FacingRight = true;
     private Rigidbody2D rb2d;       //Store a reference to the Rigidbody2D component required to use 2D Physics.
     Animator anim;                  //Store a reference to the animator to update animations.
@@ -15,7 +16,6 @@ public class ActorMovement : MonoBehaviour
     bool grounded = false;
     public Transform groundCheck;
     float groundRadius = 0.3f;
-    public float jumpForce = 200.0f;
     public LayerMask whatIsGround;
     public float fallMultiplier = 2.5f;
 
@@ -72,7 +72,7 @@ public class ActorMovement : MonoBehaviour
         Vector2 movement = new Vector2(moveHorizontal, 0);
 
         //Call the AddForce function of our Rigidbody2D rb2d supplying movement multiplied by speed to move our player.
-        if (moveHorizontal < maxSpeed)
+        if( (Mathf.Abs(rb2d.velocity.x) < maxSpeed) || Mathf.Sign(movement.x) != Mathf.Sign(rb2d.velocity.x))
         {
             rb2d.AddForce(movement * speed);
         }
