@@ -9,9 +9,8 @@ public class Collect_Bits : MonoBehaviour {
     public int bitCount = 0;
 
 	void Start () {
-
+        bits_txt = GameObject.Find("bits_text").GetComponent<Text>(); ;
         bits_txt.text = "";
-
     }
 
     private void OnCollisionEnter2D(Collision2D collision)
