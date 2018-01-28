@@ -36,14 +36,13 @@ public class GoalScript2 : MonoBehaviour
         }
     }
     
-    private void OnCollisionEnter2D(Collision2D collision)
+    private void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.transform.tag == "player")
         {
             player = gameObject.transform.parent.GetComponent<Plug_Goal_Input>().Player;
             if (player.GetComponent<Collect_Bits>().bitCount == bits)
             {
-                print("hi2");
                 anim_start = true;
                 gameObject.GetComponent<Animator>().enabled = true;
                 gameObject.GetComponent<SpriteRenderer>().enabled = true;
