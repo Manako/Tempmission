@@ -8,10 +8,13 @@ public class Collect_Bits : MonoBehaviour {
     public Text bits_txt;
     public int bitCount = 0;
 
+    public AudioClip pickupsound;
     public GameObject BitGlow;
     public GameObject BitSparkle;
 
+    private AudioSource audiosrc;
     void Start () {
+        audiosrc = gameObject.GetComponent<AudioSource>();
         bits_txt = GameObject.Find("bits_text").GetComponent<Text>(); ;
         bits_txt.text = "";
     }
@@ -21,6 +24,8 @@ public class Collect_Bits : MonoBehaviour {
         
         if(collision.transform.tag == "0_bit" || collision.transform.tag == "1_bit")
         {
+            if(audiosrc != null && pickupsound != null)
+                audiosrc.PlayOneShot(pickupsound);
             string bit = "";
             if (collision.transform.tag == "0_bit")
             {
