@@ -6,10 +6,16 @@ using UnityEngine.SceneManagement;
 public class GoalScript2 : MonoBehaviour
 {
     public float delay;
-    public GameObject player;
+    private string Scene_name;
+    private GameObject player;
+    private int bits;
+    private int loaded = 0;
     bool anim_start = false;
-    void Create()
+    void Start()
     {
+        player = gameObject.transform.parent.GetComponent<Plug_Goal_Input>().Player;
+        Scene_name = gameObject.transform.parent.GetComponent<Plug_Goal_Input>().Next_Scene_Name;
+        bits = gameObject.transform.parent.GetComponent<Plug_Goal_Input>().Bits_Needed;
     }
 
     private void Update()
@@ -20,19 +26,24 @@ public class GoalScript2 : MonoBehaviour
             if (delay < 0)
             {
                 //Load next scene
-                SceneManager.LoadScene(Scene_name, LoadSceneMode.Additive);
+                if(loaded == 0)
+                {
+                    SceneManager.LoadScene(Scene_name, LoadSceneMode.Additive);
+                    loaded = 1;
+                }
+                   
             }
         }
     }
-
-    public string Scene_name;
     
     private void OnCollisionEnter2D(Collision2D collision)
     {
         if (collision.transform.tag == "player")
         {
-            if (collision.transform.GetComponent<Collect_Bits>().bitCount == 8)
+            player = gameObject.transform.parent.GetComponent<Plug_Goal_Input>().Player;
+            if (player.GetComponent<Collect_Bits>().bitCount == bits)
             {
+                print("hi2");
                 anim_start = true;
                 gameObject.GetComponent<Animator>().enabled = true;
                 gameObject.GetComponent<SpriteRenderer>().enabled = true;
