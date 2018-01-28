@@ -7,6 +7,7 @@ TagManager:
   - 0_bit
   - 1_bit
   - player
+  - enemy
   layers:
   - Default
   - TransparentFX
@@ -41,6 +42,9 @@ TagManager:
   - 
   - 
   m_SortingLayers:
+  - name: Behind
+    uniqueID: 2915552513
+    locked: 0
   - name: Default
     uniqueID: 0
     locked: 0
