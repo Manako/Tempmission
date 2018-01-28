@@ -1,16 +1,18 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class Collect_Bits : MonoBehaviour {
 
-    public TextMesh bits_txt;
+    public Text bits_txt;
     public int bitCount = 0;
 
 	void Start () {
 
         bits_txt.text = "";
-	}
+
+    }
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
@@ -40,5 +42,10 @@ public class Collect_Bits : MonoBehaviour {
             bits_txt.text = "Message received";
     }
 
-
+    public void newScene()
+    {
+        bitCount = 0;
+        Debug.Log(bitCount);
+        bits_txt.text = "";
+    }
 }

@@ -10,11 +10,11 @@ public class ActorMovement : MonoBehaviour
     bool FacingRight = true;
     private Rigidbody2D rb2d;       //Store a reference to the Rigidbody2D component required to use 2D Physics.
     Animator anim;                  //Store a reference to the animator to update animations.
-
+    ParticleSystem jumpSparks;
     //Vars used to check if grounded, so we know when we can jump.
     bool grounded = false;
     public Transform groundCheck;
-    float groundRadius = 0.5f;
+    float groundRadius = 0.3f;
     public float jumpForce = 200.0f;
     public LayerMask whatIsGround;
     public float fallMultiplier = 2.5f;
@@ -32,6 +32,7 @@ public class ActorMovement : MonoBehaviour
         rb2d = GetComponent<Rigidbody2D>();
         anim = GetComponent<Animator>();
         startPosition = transform.position;
+        jumpSparks = GetComponent<ParticleSystem>();
     }
 
     public void Die()
@@ -40,8 +41,7 @@ public class ActorMovement : MonoBehaviour
             return;
 
         isDead = true;
-        //rb2d.constraints = RigidbodyConstraints2D.FreezeAll;
-
+        rb2d.constraints = RigidbodyConstraints2D.FreezeAll;
         anim.SetBool("beenDeadForAwhileThereMate", true);
         anim.SetBool("dead", true);
         anim.SetBool("ground", true);
@@ -101,10 +101,12 @@ public class ActorMovement : MonoBehaviour
             return;
 
         // jump if key pressed
-        if (grounded && (Input.GetKeyDown(KeyCode.Space) || Input.GetKeyDown(KeyCode.UpArrow) || Input.GetKeyDown(KeyCode.W)))
+        if (/*rb2d.velocity.y < 1.5f  &&*/ grounded && (Input.GetKeyDown(KeyCode.Space) || Input.GetKeyDown(KeyCode.UpArrow) || Input.GetKeyDown(KeyCode.W)))
         {
+            
             rb2d.velocity += (Vector2.up * Physics2D.gravity.y * (fallMultiplier - 1)) / 2;// * Time.deltaTime;
             anim.SetBool("ground", false);
+            jumpSparks.Play();
             //GetComponent<Rigidbody2D>().AddForce(new Vector2(0, jumpForce));
         }
     }

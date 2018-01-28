@@ -1,32 +1,4 @@
-﻿//using System.Collections;
-//using System.Collections.Generic;
-//using UnityEngine;
-
-//public class Camera_Follow : MonoBehaviour {
-
-//    public Transform player;
-//    public Vector3 offset;
-
-//    public int x_offset = 8;
-
-//    void Update()
-//    {
-//        Vector3 cameraPosition = this.transform.position;
-//        var x = player.transform.position.x - cameraPosition.x;
-//        //var y = player.transform.position.y - cameraPosition.y;
-//        Debug.Log(x);
-//        if (x > x_offset || x < -x_offset)
-//        {
-//            //transform.position = new Vector3(player.position.x + offset.x, offset.y, offset.z);
-//            //transform.position = Vector3.Lerp(transform.position, player.transform.position, 0.1f)
-//        }
-
-
-//        transform.position = new Vector3(player.position.x + offset.x, player.position.y + offset.y, offset.z);
-//    }
-//}
-
-using UnityEngine;
+﻿using UnityEngine;
 using System.Collections;
 
 public class Camera_Follow : MonoBehaviour
