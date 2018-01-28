@@ -4,7 +4,9 @@ using UnityEngine.SceneManagement;
 
 public class ActorMovement : MonoBehaviour
 {
-
+    public AudioClip jumpsound;
+    public AudioClip footsound;
+    AudioSource audiosrc;
     public float speed;             //Floating point variable to store the player's movement speed.
     public float maxSpeed;
     public float slowingSpeed;
@@ -25,6 +27,8 @@ public class ActorMovement : MonoBehaviour
     public float killY = -25;
     Vector2 startPosition;
 
+    private int timer;
+
     // Use this for initialization
     void Start()
     {
@@ -33,6 +37,8 @@ public class ActorMovement : MonoBehaviour
         anim = GetComponent<Animator>();
         startPosition = transform.position;
         jumpSparks = GetComponent<ParticleSystem>();
+        audiosrc = GetComponent<AudioSource>();
+        timer = 0;
     }
 
     public void Die()
@@ -96,6 +102,16 @@ public class ActorMovement : MonoBehaviour
         {
             Die();
         }
+
+        if(timer == 20)
+        {
+            audiosrc.PlayOneShot(footsound);
+            timer = 0;
+        }
+        else if(grounded && (Mathf.Abs(rb2d.velocity.x) > 1))
+        {
+            timer++;
+        }
     }
 
     void Update()
@@ -106,7 +122,7 @@ public class ActorMovement : MonoBehaviour
         // jump if key pressed
         if (/*rb2d.velocity.y < 1.5f  &&*/ grounded && (Input.GetKeyDown(KeyCode.Space) || Input.GetKeyDown(KeyCode.UpArrow) || Input.GetKeyDown(KeyCode.W)))
         {
-            
+            audiosrc.PlayOneShot(jumpsound);
             rb2d.velocity += (Vector2.up * Physics2D.gravity.y * (fallMultiplier - 1)) / 2;// * Time.deltaTime;
             anim.SetBool("ground", false);
             jumpSparks.Play();
