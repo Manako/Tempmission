@@ -1,0 +1,30 @@
+20 jelly character
+---------------------------------------
+how to use
+
+
+add to scene
+
+1-drag and drop.
+2-instantiate the character with a code line like this
+Instantiate(Resources.Load("prefab/jelly2"),position,rotation);
+
+
+
+when the character die add this code line
+jelly2.GetComponent<JellyDeath>().dead = true;
+the character becomes a jelly spot ,an audio sound effect will be played ,and colliders will stop.
+
+
+characters comes with 3 behaviours
+-walker
+-jumper
+-floater
+
+choose the behaviour before the scene start or after Instantiate line.
+
+GameObject G = Instantiate(Resources.Load("prefab/jelly2"), transform.position, transform.rotation) as GameObject;
+G.GetComponent<JellyBehaviour>().behaviour = JellyBehaviour.Behaviour.jumper;
+        
+Thank you
+enjoy.

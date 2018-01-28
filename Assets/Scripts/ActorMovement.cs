@@ -52,7 +52,10 @@ public class ActorMovement : MonoBehaviour
     {
         if (isDead)
         {
-            anim.SetBool("dead", false);
+            if (dying > 30)
+            {
+                anim.SetBool("dead", false);
+            }
             anim.SetBool("ground", true);
             dying++;
             if (dying > 200)

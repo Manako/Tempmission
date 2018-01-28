@@ -3,15 +3,26 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class StraightXMovement : MonoBehaviour {
-    public float maxX = 100;
-    public float minX = 0;
+    float maxX = 100;
+    float minX = 0;
+
+    public float moveDistance;
 
     float move;
     bool movingRight;
     // Use this for initialization
     void Start()
     {
-
+        if (moveDistance > 0)
+        {
+            minX = transform.position.x;
+            maxX = transform.position.x + moveDistance;
+        }
+        else
+        {
+            minX = transform.position.x + moveDistance;
+            maxX = transform.position.x;
+        }
     }
 
     // Update is called once per frame

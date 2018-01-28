@@ -4,15 +4,26 @@ using UnityEngine;
 
 public class StraightYMovement : MonoBehaviour
 {
-    public float maxY = 100;
-    public float minY = 0;
+    float maxY = 100;
+    float minY = 0;
+
+    public float moveDistance;
 
     float move;
     bool movingUp;
     // Use this for initialization
     void Start()
     {
-
+        if (moveDistance > 0)
+        {
+            minY = transform.position.y;
+            maxY = transform.position.y + moveDistance;
+        }
+        else
+        {
+            minY = transform.position.y + moveDistance;
+            maxY = transform.position.y;
+        }
     }
 
     // Update is called once per frame

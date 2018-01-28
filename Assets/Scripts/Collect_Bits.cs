@@ -8,7 +8,10 @@ public class Collect_Bits : MonoBehaviour {
     public Text bits_txt;
     public int bitCount = 0;
 
-	void Start () {
+    public GameObject BitGlow;
+    public GameObject BitSparkle;
+
+    void Start () {
         bits_txt = GameObject.Find("bits_text").GetComponent<Text>(); ;
         bits_txt.text = "";
     }
@@ -27,7 +30,8 @@ public class Collect_Bits : MonoBehaviour {
             {
                 bit = "1 ";
             }
-
+            GameObject glow = (GameObject)Instantiate(BitGlow, transform.position, collision.transform.rotation);
+            GameObject sparkle = (GameObject)Instantiate(BitSparkle, transform.position, collision.transform.rotation);
             Destroy(collision.transform.gameObject);
 
             bitCount++;
