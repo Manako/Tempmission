@@ -93,7 +93,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4471cc8a273dd9343928ea29741d2a2b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  DeathTime: 120
+  DeathTime: 200
   BitSparkle: {fileID: 1989959049750078, guid: b7f5cc713e6f68745bd9d1c9f1220b68, type: 2}
   BitGlow: {fileID: 1270585731566084, guid: 5679fc93dcb3d844580987201046f53f, type: 2}
 --- !u!114 &114998236473463940
