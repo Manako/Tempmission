@@ -149,6 +149,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bits_txt: {fileID: 0}
+  bitCount: 0
 --- !u!114 &114338498218697876
 MonoBehaviour:
   m_ObjectHideFlags: 1

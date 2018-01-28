@@ -4,9 +4,36 @@ using UnityEngine;
 
 public class MenuScript : MonoBehaviour {
 
-	public void exitApplication()
+    public AudioClip level1_audio;
+    public AudioClip level2_audio;
+    public AudioClip level3_audio;
+
+    public AudioSource BackgroundAudio;
+
+    public void exitApplication()
     {
         Debug.Log("Exiting application");
         Application.Quit();
     }
+
+    public void startAudio(string level_name)
+    {
+        switch (level_name)
+        {
+            case "Level1": BackgroundAudio.clip = level1_audio;
+                break;
+            case "Level2":
+                BackgroundAudio.clip = level2_audio;
+                break;
+            case "Level3": BackgroundAudio.clip = level3_audio;
+                break;
+        }
+        Debug.Log(BackgroundAudio.clip);
+        BackgroundAudio.Play();
+    }
+
+    //public void loadNewGame()
+    //{
+
+    //}
 }
