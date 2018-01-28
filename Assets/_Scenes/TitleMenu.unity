@@ -127,7 +127,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &91293887
 Transform:
   m_ObjectHideFlags: 0
@@ -399,7 +399,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &759548109
 Transform:
   m_ObjectHideFlags: 0
@@ -411,6 +411,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 295645392}
+  - {fileID: 1650128051}
   - {fileID: 1519453189}
   m_Father: {fileID: 929157745}
   m_RootOrder: 1
@@ -615,6 +616,67 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   TitleScreen: {fileID: 91293886}
   IntroScreen: {fileID: 759548108}
+--- !u!1001 &1236867569
+Prefab:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 759548109}
+    m_Modifications:
+    - target: {fileID: 4206246285469996, guid: 82582ded72f6ea64d9ccf7e5b5dfb7a8, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: 458
+      objectReference: {fileID: 0}
+    - target: {fileID: 4206246285469996, guid: 82582ded72f6ea64d9ccf7e5b5dfb7a8, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: 166
+      objectReference: {fileID: 0}
+    - target: {fileID: 4206246285469996, guid: 82582ded72f6ea64d9ccf7e5b5dfb7a8, type: 2}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4206246285469996, guid: 82582ded72f6ea64d9ccf7e5b5dfb7a8, type: 2}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4206246285469996, guid: 82582ded72f6ea64d9ccf7e5b5dfb7a8, type: 2}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4206246285469996, guid: 82582ded72f6ea64d9ccf7e5b5dfb7a8, type: 2}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4206246285469996, guid: 82582ded72f6ea64d9ccf7e5b5dfb7a8, type: 2}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4206246285469996, guid: 82582ded72f6ea64d9ccf7e5b5dfb7a8, type: 2}
+      propertyPath: m_RootOrder
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114673191749371944, guid: 82582ded72f6ea64d9ccf7e5b5dfb7a8,
+        type: 2}
+      propertyPath: strings.Array.data[0]
+      value: In the distant future or not so distant past exists a digital world run
+        by automatons or perhaps just matons. After an unfortunate seg fault you have
+        been reassigned as a temporary transmitter, insuring all the appropriate message
+        data is delivered to the bus. Collect your bits and send them on the bus so
+        you can depart for the next sector.
+      objectReference: {fileID: 0}
+    - target: {fileID: 114673191749371944, guid: 82582ded72f6ea64d9ccf7e5b5dfb7a8,
+        type: 2}
+      propertyPath: position.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 114673191749371944, guid: 82582ded72f6ea64d9ccf7e5b5dfb7a8,
+        type: 2}
+      propertyPath: position.y
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_ParentPrefab: {fileID: 100100000, guid: 82582ded72f6ea64d9ccf7e5b5dfb7a8, type: 2}
+  m_IsPrefabParent: 0
 --- !u!1 &1519453188
 GameObject:
   m_ObjectHideFlags: 0
@@ -642,7 +704,7 @@ Transform:
   m_LocalScale: {x: 100, y: 100, z: 1}
   m_Children: []
   m_Father: {fileID: 759548109}
-  m_RootOrder: 1
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &1519453190
 SpriteRenderer:
@@ -688,6 +750,11 @@ SpriteRenderer:
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
+--- !u!4 &1650128051 stripped
+Transform:
+  m_PrefabParentObject: {fileID: 4206246285469996, guid: 82582ded72f6ea64d9ccf7e5b5dfb7a8,
+    type: 2}
+  m_PrefabInternal: {fileID: 1236867569}
 --- !u!1 &1927472141
 GameObject:
   m_ObjectHideFlags: 0
