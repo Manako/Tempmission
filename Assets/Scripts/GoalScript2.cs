@@ -26,6 +26,7 @@ public class GoalScript2 : MonoBehaviour
     {
         if (anim_start)
         {
+            gameObject.transform.parent.GetChild(3).gameObject.SetActive(true);
             if (!audio_played)
             {
                 audiosrc.PlayOneShot(successsound);
