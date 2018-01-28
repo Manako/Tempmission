@@ -28,6 +28,8 @@ public class GoalScript2 : MonoBehaviour
                 //Load next scene
                 if(loaded == 0)
                 {
+                    Scene current_scene = SceneManager.GetActiveScene();
+                    SceneManager.UnloadSceneAsync(current_scene);
                     SceneManager.LoadScene(Scene_name, LoadSceneMode.Additive);
                     loaded = 1;
                 }
