@@ -46,7 +46,8 @@ public class TextHandler : MonoBehaviour {
                 textbox.parent = this;
                 textbox.SetStyle(style);
                 textbox.tex = texture;
-                textbox.p_tex = prompt_texture;
+                if(prompt_texture != null)
+                    textbox.p_tex = prompt_texture;
                 textbox.name = name;
                 textbox.hasname = hasname;
                 if (hasname)
