@@ -661,7 +661,7 @@ Prefab:
     m_Modifications:
     - target: {fileID: 4945598672327404, guid: c66bc7dcd2d7f2d49a1c1b3ca4a1b12b, type: 2}
       propertyPath: m_LocalPosition.x
-      value: 51.14
+      value: 47.84
       objectReference: {fileID: 0}
     - target: {fileID: 4945598672327404, guid: c66bc7dcd2d7f2d49a1c1b3ca4a1b12b, type: 2}
       propertyPath: m_LocalPosition.y
@@ -700,6 +700,26 @@ Prefab:
         type: 2}
       propertyPath: Bits_Needed
       value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 114634293374984642, guid: c66bc7dcd2d7f2d49a1c1b3ca4a1b12b,
+        type: 2}
+      propertyPath: style.m_Normal.m_TextColor.r
+      value: 0.9852941
+      objectReference: {fileID: 0}
+    - target: {fileID: 114634293374984642, guid: c66bc7dcd2d7f2d49a1c1b3ca4a1b12b,
+        type: 2}
+      propertyPath: style.m_Normal.m_TextColor.g
+      value: 0.241
+      objectReference: {fileID: 0}
+    - target: {fileID: 114634293374984642, guid: c66bc7dcd2d7f2d49a1c1b3ca4a1b12b,
+        type: 2}
+      propertyPath: style.m_Normal.m_TextColor.b
+      value: 0.191
+      objectReference: {fileID: 0}
+    - target: {fileID: 114634293374984642, guid: c66bc7dcd2d7f2d49a1c1b3ca4a1b12b,
+        type: 2}
+      propertyPath: strings.Array.data[0]
+      value: Challenge promotes a productive work ethic!
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: c66bc7dcd2d7f2d49a1c1b3ca4a1b12b, type: 2}
