@@ -168,7 +168,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 1176953074285484, guid: ecd2fbdc313fc57499327c9c9eaec508, type: 2}
       propertyPath: m_Name
-      value: Player (1)
+      value: Player
       objectReference: {fileID: 0}
     - target: {fileID: 198186860837635758, guid: ecd2fbdc313fc57499327c9c9eaec508,
         type: 2}
@@ -225,7 +225,7 @@ Prefab:
     - target: {fileID: 114535699770011954, guid: c66bc7dcd2d7f2d49a1c1b3ca4a1b12b,
         type: 2}
       propertyPath: Next_Scene_Name
-      value: Level1
+      value: Level2
       objectReference: {fileID: 0}
     - target: {fileID: 114535699770011954, guid: c66bc7dcd2d7f2d49a1c1b3ca4a1b12b,
         type: 2}
