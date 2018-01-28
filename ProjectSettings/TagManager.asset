@@ -6,6 +6,7 @@ TagManager:
   tags:
   - 0_bit
   - 1_bit
+  - player
   layers:
   - Default
   - TransparentFX
