@@ -48,7 +48,7 @@ public class Draw_Text_Box : MonoBehaviour
             GUI.DrawTexture(usebox, tex);
             GUI.Label(usebox, message.Substring(0, characters), style);
 
-            if(draw_prompt)
+            if(draw_prompt && p_tex != null)
                 GUI.DrawTexture(new Rect(usebox.x + usebox.width - p_tex.width - 10, usebox.y + usebox.height - p_tex.height - 10, p_tex.width, p_tex.height), p_tex);
         }
         else
@@ -61,7 +61,7 @@ public class Draw_Text_Box : MonoBehaviour
 
             GUI.DrawTexture(usebox, tex);
             GUI.Label(new Rect(10, 10, 100, 50), message.Substring(0, characters), style);
-            if (draw_prompt)
+            if (draw_prompt && p_tex != null)
                 GUI.DrawTexture(new Rect(usebox.x + usebox.width - p_tex.width - 10, usebox.y + usebox.height - p_tex.height - 10, p_tex.width, p_tex.height), p_tex);
         }
     }
