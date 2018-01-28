@@ -6,7 +6,7 @@
 {
 
     public Transform Player;
-    float MoveSpeed = 1.5f;
+    public float MoveSpeed = 1.5f;
     float MaxDist = 10;
     float MinDist = 0;
 
