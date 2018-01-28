@@ -40,8 +40,7 @@ public class ActorMovement : MonoBehaviour
             return;
 
         isDead = true;
-        //rb2d.constraints = RigidbodyConstraints2D.FreezeAll;
-
+        rb2d.constraints = RigidbodyConstraints2D.FreezeAll;
         anim.SetBool("beenDeadForAwhileThereMate", true);
         anim.SetBool("dead", true);
         anim.SetBool("ground", true);
