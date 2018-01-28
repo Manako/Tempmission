@@ -51022,7 +51022,7 @@ Prefab:
     - target: {fileID: 66830220756591264, guid: e9cb0cd9974cec84795f940d1a919b19,
         type: 2}
       propertyPath: m_ColliderPaths.Array.data[0].m_ColliderPaths.Array.data[38].Array.data[3].X
-      value: 129750000
+      value: 129761905
       objectReference: {fileID: 0}
     - target: {fileID: 66830220756591264, guid: e9cb0cd9974cec84795f940d1a919b19,
         type: 2}
@@ -51572,7 +51572,7 @@ Prefab:
     - target: {fileID: 66830220756591264, guid: e9cb0cd9974cec84795f940d1a919b19,
         type: 2}
       propertyPath: m_CompositePaths.m_Paths.Array.data[38].Array.data[3].x
-      value: 12.975
+      value: 12.976191
       objectReference: {fileID: 0}
     - target: {fileID: 66830220756591264, guid: e9cb0cd9974cec84795f940d1a919b19,
         type: 2}
@@ -53272,7 +53272,7 @@ Prefab:
     - target: {fileID: 66830220756591264, guid: e9cb0cd9974cec84795f940d1a919b19,
         type: 2}
       propertyPath: m_ColliderPaths.Array.data[0].m_ColliderPaths.Array.data[40].Array.data[1].X
-      value: 120250000
+      value: 120238095
       objectReference: {fileID: 0}
     - target: {fileID: 66830220756591264, guid: e9cb0cd9974cec84795f940d1a919b19,
         type: 2}
@@ -53822,7 +53822,7 @@ Prefab:
     - target: {fileID: 66830220756591264, guid: e9cb0cd9974cec84795f940d1a919b19,
         type: 2}
       propertyPath: m_CompositePaths.m_Paths.Array.data[40].Array.data[1].x
-      value: 12.025001
+      value: 12.023809
       objectReference: {fileID: 0}
     - target: {fileID: 66830220756591264, guid: e9cb0cd9974cec84795f940d1a919b19,
         type: 2}

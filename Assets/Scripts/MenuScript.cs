@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class MenuScript : MonoBehaviour {
 
@@ -32,8 +33,32 @@ public class MenuScript : MonoBehaviour {
         BackgroundAudio.Play();
     }
 
-    //public void loadNewGame()
-    //{
+    public void loadNewGame()
+    {
+        int c = SceneManager.sceneCount;
+        for (int i = 0; i < c; i++)
+        {
+            Scene scene = SceneManager.GetSceneAt(i);
+            SceneManager.UnloadSceneAsync(scene);
+        }
 
-    //}
+        SceneManager.LoadScene("TitleMenu");
+    }
+
+    public void loadNewLevel(string level_name)
+    {
+       
+        int c = SceneManager.sceneCount;
+        for (int i = 0; i < c; i++)
+        {
+            Scene scene = SceneManager.GetSceneAt(i);
+            SceneManager.UnloadSceneAsync(scene);
+            
+        }
+
+        SceneManager.LoadScene(level_name);
+        SceneManager.LoadScene("Level_Overlay", LoadSceneMode.Additive);
+
+
+    }
 }
