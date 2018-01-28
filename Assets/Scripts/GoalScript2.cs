@@ -5,23 +5,32 @@ using UnityEngine.SceneManagement;
 
 public class GoalScript2 : MonoBehaviour
 {
+    public AudioClip successsound;
     public float delay;
     private string Scene_name;
     private GameObject player;
     private int bits;
     private int loaded = 0;
+    private AudioSource audiosrc;
+    private bool audio_played = false;
     bool anim_start = false;
     void Start()
     {
         player = gameObject.transform.parent.GetComponent<Plug_Goal_Input>().Player;
         Scene_name = gameObject.transform.parent.GetComponent<Plug_Goal_Input>().Next_Scene_Name;
         bits = gameObject.transform.parent.GetComponent<Plug_Goal_Input>().Bits_Needed;
+        audiosrc = gameObject.GetComponent<AudioSource>();
     }
 
     private void Update()
     {
         if (anim_start)
         {
+            if (!audio_played)
+            {
+                audiosrc.PlayOneShot(successsound);
+                audio_played = true;
+            }
             delay -= Time.deltaTime;
             if (delay < 0)
             {
