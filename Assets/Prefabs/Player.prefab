@@ -264,6 +264,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   bits_txt: {fileID: 0}
   bitCount: 0
+  pickupsound: {fileID: 8300000, guid: bbf5a73b3cc1e564b8c169082b2b3b3f, type: 3}
   BitGlow: {fileID: 1270585731566084, guid: 5679fc93dcb3d844580987201046f53f, type: 2}
   BitSparkle: {fileID: 1989959049750078, guid: b7f5cc713e6f68745bd9d1c9f1220b68, type: 2}
 --- !u!114 &114338498218697876
